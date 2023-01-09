@@ -20,3 +20,14 @@ Use npm to install the typescript package.
 ```bash
 npm i -g typescript
 ```
+
+Once you have it installed you can make your TypeScript file in your code editor, ending the file name with .ts
+For example: index.ts
+
+## Running code
+
+Once you are ready to run your TypeScript Code, type **tsc nameoffile.ts** the following example will run the code on a file called index.ts.
+
+```bash
+tsc index.ts
+```
