@@ -1,24 +1,21 @@
-class Point {
-  private x: number;
-  private y: number;
-  constructor(x: number, y: number) {
-    this.x = x;
-    this.y = y;
+export default class EncapsulationExample {
+  private secretValue: string;
+  private secretMethod(): void {
+    console.log("This is a private method!");
   }
 
-  public getX(): number {
-    return this.x;
+  public value: string;
+  public setValue(newValue: string): void {
+    this.value = newValue;
   }
-
-  public getY(): number {
-    return this.y;
-  }
-
-  public setX(x: number): void {
-    this.x = x;
-  }
-
-  public setY(y: number): void {
-    this.y = y;
+  public getValue(): string {
+    return this.value;
   }
 }
+
+let obj = new EncapsulationExample();
+obj.setValue("Hello World!");
+console.log(obj.getValue());
+// Output: "Hello World!"
+
+// obj.secretMethod();
