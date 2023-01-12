@@ -1,24 +1,22 @@
-interface Prism {
-  draw(): void;
+interface Animal {
+  makeSound(): void;
 }
 
-class RectangularPrism implements Prism {
-  draw() {
-    console.log("Drawing a rectangular prism");
+class Dog implements Animal {
+  makeSound() {
+    console.log("Woof!");
   }
 }
 
-class Cylinder implements Prism {
-  draw() {
-    console.log("Drawing a cylinder");
+class Cat implements Animal {
+  makeSound() {
+    console.log("Meow!");
   }
 }
 
-function drawPrisms(prisms: Prism[]) {
-  for (const prism of prisms) {
-    prism.draw();
-  }
-}
+let animal: Animal;
+animal = new Dog();
+animal.makeSound(); // Output: "Woof!"
 
-const prisms = [new RectangularPrism(), new Cylinder()];
-drawPrisms(prisms);
+animal = new Cat();
+animal.makeSound(); // Output: "Meow!"
