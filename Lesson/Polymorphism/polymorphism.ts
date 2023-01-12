@@ -1,24 +1,24 @@
-interface Shape {
+interface Prism {
   draw(): void;
 }
 
-class Rectangle implements Shape {
+class RectangularPrism implements Prism {
   draw() {
-    console.log("Drawing a rectangle");
+    console.log("Drawing a rectangular prism");
   }
 }
 
-class Circle implements Shape {
+class Cylinder implements Prism {
   draw() {
-    console.log("Drawing a circle");
+    console.log("Drawing a cylinder");
   }
 }
 
-function drawShapes(shapes: Shape[]) {
-  for (const shape of shapes) {
-    shape.draw();
+function drawPrisms(prisms: Prism[]) {
+  for (const prism of prisms) {
+    prism.draw();
   }
 }
 
-const shapes = [new Rectangle(), new Circle()];
-drawShapes(shapes);
+const prisms = [new RectangularPrism(), new Cylinder()];
+drawPrisms(prisms);
